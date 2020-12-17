@@ -1,0 +1,120 @@
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 8rem;
+}
+
+h2 {
+    font-size: 5rem;
+    margin-top: 20px;
+}
+  
+.container::after {
+    content: "";
+    background: url('main.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Add 'x' or 'checkmark' for correct input values */
+input:invalid+span:after {
+    content: '✖';
+    padding-left: 5px;
+    font-size: 30px;
+}
+  
+input:valid+span:after {
+    content: '✓';
+    padding-left: 5px;
+    font-size: 30px;
+}
+
+/* Turn off those input number small top & bottom arrows */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#userInput {
+    width: 300px;
+    height: 110px;
+    padding: 20px 0;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#baseCurrency, #quoteCurrency {
+    width: 200px;
+    height: 110px;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#baseCurrency {
+    margin-right: 20px;
+}
+
+#baseAmount, #currencyQuotation {
+    display: none;
+}
+
+#submit {
+    display: block;
+    margin: 40px 0;
+    width: 760px;
+    height: 80px;
+    border: 2px solid goldenrod;
+    background-color: greenyellow;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+#result {
+    font-size: 30px;
+    background-color: honeydew;
+    border: 2px dashed lightcoral;
+}
